@@ -57,7 +57,11 @@ func TestSleep(t *testing.T) {
 
 	require.Equal(t, object.Nil, got)
 	require.True(t, elapsed >= 100*time.Millisecond)
+<<<<<<< HEAD
 	require.True(t, elapsed < 250*time.Millisecond) // Allow some margin for error
+=======
+	require.True(t, elapsed < 150*time.Millisecond) // Allow some margin for error
+>>>>>>> 69288f7 (Add unix to the time module (#261))
 }
 
 func TestSince(t *testing.T) {
@@ -69,5 +73,9 @@ func TestSince(t *testing.T) {
 
 	elapsed := got.(*object.Float).Value()
 	require.True(t, elapsed >= 0.1)
+<<<<<<< HEAD
 	require.True(t, elapsed < 0.25) // Allow some margin for error
+=======
+	require.True(t, elapsed < 0.15) // Allow some margin for error
+>>>>>>> 69288f7 (Add unix to the time module (#261))
 }
